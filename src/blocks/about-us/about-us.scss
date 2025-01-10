@@ -1,0 +1,62 @@
+.about-us {
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  @media (min-width: $screen-xl) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    gap: 16px 0;
+  }
+
+  &__img-col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 12);
+    @include col(lg, 6);
+    @include col(xl, 6, $grid-columns, 32px);
+  }
+
+  &__text-col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 12);
+    @include col(lg, 6);
+    @include col(xl, 6, $grid-columns, 32px);
+  }
+
+  &__img {
+    border-radius: $border-radius--lg;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text {
+
+    span {
+      display: block;
+      font-weight: 500;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px 24px;
+    margin-top: 40px;
+
+    & > * {
+      flex: 0 0 auto;
+
+      @media (max-width: $screen-md - 1) {
+        flex: 1 1 100%;
+      }
+    }
+  }
+}

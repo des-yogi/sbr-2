@@ -1,0 +1,42 @@
+.gallery {
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  @media (min-width: $screen-xl) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    gap: 24px 0;
+    justify-content: center;
+  }
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(sm, 6, $grid-columns, 16px);
+    @include col(md, 4);
+    @include col(xl, 3, $grid-columns, 32px);
+  }
+
+  &__item {
+    border-radius: $border-radius--lg;
+    background-color: $gray-100;
+
+    &:hover,
+    &:focus {
+
+      img {
+        scale: (1.1);
+      }
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+      transition: scale $transition-time ease;
+    }
+  }
+}

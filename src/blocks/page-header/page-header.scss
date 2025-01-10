@@ -1,0 +1,57 @@
+.page-header {
+  padding: 24px 0;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    //justify-content: space-between;
+    gap: 32px;
+    height: 100%;
+  }
+
+  &__logo-wrapper {
+    flex: 0 0 32px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__row {
+    flex: 1 1 auto;
+  }
+
+  &__text-wrapper {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col-offset(md, 1.5);
+    @include col(md, 9);
+    //@include col-offset(xl, 2);
+    //@include col(xl, 8, $grid-columns, 32px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: $white;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__link-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 32px;
+
+    & > .btn {
+      flex: 1 1 100%;
+
+      @media (min-width: $screen-md) {
+        flex: 0 0 auto;
+      }
+    }
+  }
+}

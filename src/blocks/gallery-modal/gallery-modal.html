@@ -1,0 +1,69 @@
+<!--DEV
+@ @include('blocks/gallery-modal/gallery-modal.html')
+-->
+
+<!-- Modal -->
+<div class="modal fade  gallery-modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable  modal-xl">
+    <div class="modal-content">
+      <div class="modal-header  modal-header--gallery">
+        <!-- <h4 class="modal-title" id="staticBackdropLabel">Modal title</h4> -->
+        <button type="button" class="btn  btn--icon" data-bs-dismiss="modal" aria-label="Close">
+          <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"></use></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="gallery-modal__content">
+          <div class="swiper  gallery-modal__img-container">
+
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide  gallery-modal__slide">
+                <div class="embed-responsive embed-responsive--3-4  gallery-modal__img">
+                  <picture>
+                    <img src="img/solution-1.jpg" alt="Описание изображения" width="276" height="368" loading="lazy">
+                  </picture>
+                </div>
+              </div>
+
+              <div class="swiper-slide  gallery-modal__slide">
+                <div class="embed-responsive embed-responsive--3-4  gallery-modal__img">
+                  <picture>
+                    <img src="img/solution-1.jpg" alt="Описание изображения" width="276" height="368" loading="lazy">
+                  </picture>
+                </div>
+              </div>
+
+              <div class="swiper-slide  gallery-modal__slide">
+                <div class="embed-responsive embed-responsive--3-4  gallery-modal__img">
+                  <picture>
+                    <img src="img/solution-1.jpg" alt="Описание изображения" width="276" height="368" loading="lazy">
+                  </picture>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="swiper__controls">
+              <div class="swiper-button-prev  btn  btn--icon">
+                <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-left"></use></svg>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next  btn  btn--icon">
+                <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chevron-right"></use></svg>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="gallery-modal__text-container">
+            <p class="h3">Japanese style</p>
+            <p>At Toronto Bathroom Renovation, we pride ourselves on delivering exceptional bathroom makeovers that go beyond expectations. Our clients’ stories showcase how we bring their dreams to life, whether it’s creating a safer, more accessible bathroom for seniors, upgrading functionality for busy families, or designing luxurious retreats for those seeking a personal oasis.</p>
+            <p>Each renovation we undertake is personalized to meet individual needs and style preferences. From initial consultation to the final walkthrough, we ensure a seamless process that prioritizes your satisfaction. Hear directly from homeowners who have experienced the transformation of their spaces and enjoy the renewed comfort, convenience, and beauty we bring to their lives.</p>
+            <p>Your story could be next—because at Toronto Bathroom Renovation, we don’t just renovate bathrooms; we redefine them.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

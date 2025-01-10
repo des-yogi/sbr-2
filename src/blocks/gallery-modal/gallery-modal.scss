@@ -1,0 +1,127 @@
+.gallery-modal {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+
+  }
+
+  &__content {
+    //display: flex;
+    //flex-direction: column;
+    //gap: 16px;
+    //height: 100%;
+    //overflow: hidden;
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      justify-content: space-between;
+      gap: 32px;
+
+
+      @media (min-width: $screen-xl) {
+        height: 100%;
+        overflow: hidden;
+      }
+    }
+  }
+
+  &__img-container {
+    flex: 0 0 auto;
+
+    @media (min-width: $screen-md) {
+      width: 280px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 352px;
+      height: 100%;
+    }
+  }
+
+  &__text-container {
+    flex: 1 1 auto;
+    //overflow-y: auto;
+
+    @media (min-width: $screen-xl) {
+     height: 600px;
+     overflow-y: auto;
+    }
+  }
+
+  &__img {
+    width: 160px;
+    margin: 0 auto;
+    border-radius: $border-radius--lg;
+
+    @media (min-width: $screen-md) {
+      width: 280px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 352px;
+    }
+  }
+
+  &__slide {
+    height: auto;
+  }
+
+  .swiper-wrapper {
+
+    @media (min-width: $screen-xl) {
+      height: auto;
+    }
+  }
+
+  .swiper__controls {
+    margin: 24px 0;
+
+    @media (min-width: $screen-xl) {
+      margin: 24px 0 0;
+    }
+  }
+
+  .modal-dialog.modal-dialog-centered {
+    height: calc(100svh - var(--bs-modal-margin) * 2);
+  }
+
+  .modal-content {
+    //max-height: 100%;
+    //overflow: hidden;
+  }
+
+  .modal-header {
+
+    &--gallery {
+      padding: 0;
+      position: relative;
+      z-index: 2;
+
+      .btn.btn--icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        //z-index: 1;
+        //cursor: pointer;
+        border: none;
+        //border-radius: 0;
+        color: $main-color;
+        background-color: rgba($white, 0.8);
+
+        &:hover,
+        &:focus {
+          color: $color-danger;
+          background-color: rgba($white, 1);
+        }
+      }
+    }
+  }
+
+  // .modal-dialog-scrollable .modal-body {
+
+  //   @media (min-width: $screen-xl) {
+  //     padding-bottom: 20px;
+  //   }
+  // }
+}

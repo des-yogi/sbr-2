@@ -1,0 +1,106 @@
+.accordion {
+  font-family: $font-family;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__item {
+    border-radius: $border-radius-xl;
+    border: 1px solid $gray-100;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    transition: all $transition-time;
+
+    & + & {
+      margin-top: 16px;
+    }
+
+    &:has(#{$block-name}__button:hover),
+    &:has(#{$block-name}__button:focus) {
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.40);
+    }
+  }
+
+  &__header {
+    margin: 0;
+    font-size: inherit;
+    font-weight: 500;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 16px;
+    position: relative;
+    width: 100%;
+    padding: 24px;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-align: initial;
+    background-color: $body-bg;
+    //border-radius: $border-radius-xl;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+
+    &[aria-expanded=true] {
+
+      #{$block-name}__icon {
+
+        span::after {
+          transform: translate(-50%, -50%) rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__title {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    text-align: initial;
+    height: 100%;
+    line-height: 1.3;
+  }
+
+  &__icon {
+    flex: 0 0 24px;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    //border-radius: 50%;
+    background-color: transparent;
+    transition: background $transition-time;
+
+    span {
+      display: block;
+      position: relative;
+      width: 18px;
+      height: 2px;
+      background-color: $main-color;
+      border-radius: 2px;
+
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+        width: 18px;
+        height: 2px;
+        background-color: $main-color;
+        transition: transform $transition-time;
+      }
+    }
+  }
+
+  &__body {
+    padding: 0 24px 24px 24px;
+  }
+}
+

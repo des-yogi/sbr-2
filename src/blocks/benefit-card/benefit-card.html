@@ -1,0 +1,17 @@
+<!--DEV
+@ @include('blocks/benefit-card/benefit-card.html', {
+  "img": "credit-card",
+  "title": "Pay with instalments",
+  "text": "We provide flexible payment options, allowing you to break down the cost into three parts: 50% at the start of work, 40% during progress, and 10% upon final inspection."
+})
+-->
+
+<div class="benefit-card">
+  <div class="embed-responsive embed-responsive--1-1  benefit-card__img">
+    <img src="img/@@img.svg" alt="" width="104" height="104" loading="lazy">
+  </div>
+  <div class="benefit-card__text">
+    <h3 class="h6  benefit-card__title">@@title</h3>
+    <p class="benefit-card__descr">@@text</p>
+  </div>
+</div>

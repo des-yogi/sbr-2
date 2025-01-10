@@ -1,0 +1,68 @@
+.onestop-shop {
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  @media (min-width: $screen-xl) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  // .complex-heading__subtitle {
+
+  //   @media (min-width: $screen-lg) {
+  //     display: none;
+  //   }
+  // }
+
+  &__row {
+    gap: 32px 0;
+  }
+
+  &__text-col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 12);
+    @include col(lg, 6);
+    @include col(xl, 6, $grid-columns, 32px);
+  }
+
+  &__img-col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 12);
+    @include col(lg, 6);
+    @include col(xl, 6, $grid-columns, 32px);
+  }
+
+  &__text {
+
+    @media (min-width: $screen-lg) {
+      position: sticky;
+      top: 24px;
+    }
+  }
+
+  &__title {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
+  }
+
+  &__address {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    svg {
+      fill: $main-color;
+    }
+  }
+
+  &__images {
+    display: flex;
+    flex-direction: column;
+    gap: 24px 0;
+  }
+}

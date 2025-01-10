@@ -1,0 +1,22 @@
+.accecibility-card {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__img {
+    margin-bottom: 16px;
+    border-radius: $border-radius--lg;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__title {
+    margin: 0 0 16px;
+  }
+
+  &__descr {
+    margin: 0;
+  }
+}
