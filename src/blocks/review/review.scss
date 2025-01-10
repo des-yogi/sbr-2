@@ -1,0 +1,123 @@
+.review {
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  @media (min-width: $screen-xl) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    gap: 24px 0;
+  }
+
+  &__intro-text-col,
+  &__item-col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 12);
+    @include col(lg, 6);
+    @include col(xl, 6, $grid-columns, 32px);
+  }
+
+  &__slider {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 32px 0;
+  }
+
+  &__intro-title {
+    margin-top: 0;
+  }
+
+  &__content {
+    position: relative;
+    padding: 110px 24px 24px;
+    border: 2px solid $gray-100; //$gray-100
+    border-radius: $border-radius--lg;
+    //border-image: linear-gradient($gray-100, rgba(198, 198, 198, 0) 90%) 30;
+    //overflow: hidden;
+
+    &::before,
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+    }
+
+    &::before {
+      top: 35%;
+      right: -2px;
+      bottom: -2px;
+      left: -2px;
+      background-image: linear-gradient(to top, $white, transparent);
+    }
+
+    &::after {
+      top: 24px;
+      left: 24px;
+      width: 56px;
+      height: 56px;
+      background-position: center;
+      background-size: 56px;
+      background-image: svg-load('../blocks/sprite-svg/svg/quote.svg', fill=$main-color);
+    }
+
+    p {
+      position: relative;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    //gap: 24px;
+    gap: 16px 32px;
+    position: relative;
+    padding-top: 16px;
+    margin-top: 16px;
+    border-top: 1px solid $gray-100;
+
+    @media (max-width: $screen-md - 1) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .stars {
+      flex: 0 0 auto;
+    }
+  }
+
+  &__author {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__ava {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+  }
+
+  &__name {
+    margin: 0;
+  }
+
+  &__logo-wrapper {
+    flex: 1 1 100%;
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    padding-top: 16px;
+    border-top: 1px solid $gray-100;
+  }
+
+  &__logo-res {
+    display: inline-flex;
+  }
+}

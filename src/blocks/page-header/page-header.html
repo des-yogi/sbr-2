@@ -1,0 +1,36 @@
+<!--DEV
+@ @include('blocks/page-header/page-header.html')
+-->
+
+<header class="page-header  hero"
+        style="background-image: url('img/hero-bg.webp')"
+        data-bg="img/hero-bg.jpg"
+        data-bg-webp="img/hero-bg.webp"
+>
+  <div class="container  page-header__inner">
+    <div class="page-header__logo-wrapper">
+      @@include('../../blocks/logo/logo.html', {
+        "logo": "sbr-white-logo"
+      })
+    </div>
+
+    <div class="row  page-header__row">
+      <div class="page-header__text-wrapper">
+        <h1 class="page-header__title">Your Bathroom Is Holding You Back?</h1>
+        <p class="page-header__intro  subtitle">Adapt your renovation with your life, not the other way around!</p>
+
+        <div class="page-header__link-wrapper">
+          <a href="#" class="btn">
+            <span>Get a Quote</span>
+          </a>
+
+          <a href="tel:+14164817477" class="btn  btn--outline-dark">
+            <span>Call Us: +1 416-481-7477</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+

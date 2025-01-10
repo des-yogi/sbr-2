@@ -1,0 +1,40 @@
+.free-quote {
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  @media (min-width: $screen-xl) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    gap: 32px 0;
+  }
+
+  &__text-col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 12);
+    @include col(lg, 6);
+    @include col(xl, 6, $grid-columns, 32px);
+  }
+
+  &__img-col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(lg, 0);
+    @include col(lg, 6);
+    @include col(xl, 6, $grid-columns, 32px);
+  }
+
+  &__img {
+    border-radius: $border-radius-xl;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

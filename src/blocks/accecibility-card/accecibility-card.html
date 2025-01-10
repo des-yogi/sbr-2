@@ -1,0 +1,36 @@
+<!--DEV
+@ @include('blocks/accecibility-card/accecibility-card.html', {
+  "img1": "barier-free-entry-desktop",
+  "img2": "barier-free-entry-mobile",
+  "img3": "barier-free-entry-tablet",
+  "img4": "barier-free-entry-big",
+  "title": "Barrier-free entry",
+  "text": "No thresholds or steps, making entry and exit easier and enough space to maneuver a wheelchair or walker"
+})
+-->
+
+<article class="accecibility-card">
+  <div class="embed-responsive embed-responsive--4-3  accecibility-card__img">
+    <picture>
+      <source srcset="img/@@img1.webp,
+                      img/@@img2.webp 2x" media="(min-width: 1280px)" type="image/webp">
+      <source srcset="img/@@img1.jpg,
+                      img/@@img2.jpg 2x" media="(min-width: 1280px)">
+
+      <source srcset="img/@@img4.webp" media="(min-width: 1024px)" type="image/webp">
+      <source srcset="img/@@img4.jpg" media="(min-width: 1024px)">
+
+      <source srcset="img/@@img3.webp" media="(min-width: 480px)" type="image/webp">
+      <source srcset="img/@@img3.jpg" media="(min-width: 480px)">
+
+      <source srcset="img/@@img2.webp" media="(min-width: 320px)" type="image/webp">
+      <source srcset="img/@@img2.jpg" media="(min-width: 320px)">
+
+      <img src="img/@@img4.jpg" alt="@@title" width="400" height="300" loading="lazy">
+    </picture>
+  </div>
+  <div class="accecibility-card__text">
+    <h3 class="h6  accecibility-card__title">@@title</h3>
+    <p class="accecibility-card__descr">@@text</p>
+  </div>
+</article>

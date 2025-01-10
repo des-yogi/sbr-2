@@ -1,0 +1,22 @@
+.benefit-card {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__img {
+    width: 104px;
+    margin: 0 auto 24px;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__title {
+    margin: 0 0 8px;
+  }
+
+  &__descr {
+    margin: 0;
+  }
+}

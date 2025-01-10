@@ -1,0 +1,79 @@
+.project-slide {
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  @media (min-width: $screen-xl) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  .swiper__controls {
+
+    @media (min-width: $screen-lg) {
+      justify-content: initial;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @media (max-width: $screen-lg - 1) {
+      flex-direction: column-reverse;
+    }
+
+    @media (min-width: $screen-lg) {
+      gap: 16px;
+    }
+  }
+
+  &__item-row {
+    gap: 32px 0;
+  }
+
+  &__item-text-col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col(md, 12);
+    @include col(lg, 6);
+    @include col(xl, 6, $grid-columns, 32px);
+  }
+
+  &__item-img-col {
+    @include col(xs, 12, $grid-columns, 16px);
+    @include col-offset(sm, 1);
+    @include col(sm, 10);
+    @include col-offset(md, 2);
+    @include col(md, 8);
+    @include col-offset(lg, 0);
+    @include col(lg, 6);
+    @include col(xl, 6, $grid-columns, 32px);
+  }
+
+  &__item-title {
+    margin-top: 0;
+
+    & + p {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__item-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 16px 0;
+    font-weight: 500;
+
+    li {
+      flex: 1 1 100%;
+      padding-left: 32px;
+      background-position: top 2px left;
+      background-repeat: no-repeat;
+      background-size: 24px;
+      background-image: svg-load('../blocks/sprite-svg/svg/check-circle.svg', fill=$main-color);
+    }
+  }
+}
