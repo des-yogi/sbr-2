@@ -1,4 +1,4 @@
-(function(){
+window.addEventListener('DOMContentLoaded', () => {
   const gallerySlider = new Swiper('.gallery-modal__img-container', {
     speed: 400,
     slidesPerView: 1,
@@ -11,10 +11,7 @@
       el: '.swiper-pagination',
       type: 'bullets',
     },
-    //allowTouchMove: false,
-    // on: {
-    //   init: initBeforeAfterSliders, // Вызываем функцию инициализации при загрузке Swiper
-    //   slideChange: initBeforeAfterSliders, // Повторяем инициализацию при смене слайда
-    // },
+    observer: true,
+    grabCursor: true,
   });
-}());
+});
