@@ -22,21 +22,47 @@
   }
 
   &__item {
-    border-radius: $border-radius--lg;
-    background-color: $gray-100;
+    text-decoration: none;
+    color: $text-color;
 
     &:hover,
     &:focus {
+      text-decoration: none;
 
       img {
         scale: (1.1);
       }
     }
 
-    img {
-      object-fit: cover;
-      object-position: center;
-      transition: scale $transition-time ease;
+    .embed-responsive {
+      border-radius: $border-radius--lg;
+      background-color: $gray-100;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: $body-bg;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 24px;
+        background-image: svg-load('../blocks/sprite-svg/svg/plus.svg', fill=$main-color);
+      }
+
+      img {
+        object-fit: cover;
+        object-position: center;
+        transition: scale $transition-time ease;
+      }
+    }
+
+    .subtitle {
+      display: block;
+      text-align: center;
     }
   }
 }
